@@ -369,7 +369,7 @@ class HibernateMainTest {
        session.getTransaction().commit();
     }
 
-		@Test
+    @Test
     public void addNewUserAndCompany() {
         @Cleanup SessionFactory sessionFactory = ConnectionUtils.buildSession();
         @Cleanup Session session = sessionFactory.openSession();
@@ -381,7 +381,7 @@ class HibernateMainTest {
         session.getTransaction().commit();
     }
 
-		@Test
+    @Test
     public void checkOrphalRemoval() {
         @Cleanup SessionFactory sessionFactory = ConnectionUtils.buildSession();
         @Cleanup Session session = sessionFactory.openSession();
@@ -391,7 +391,7 @@ class HibernateMainTest {
         session.getTransaction().commit();
     }
 
-		@Test
+    @Test
     public void checkOneToOneSint() {
         @Cleanup SessionFactory sessionFactory = ConnectionUtils.buildSession();
         @Cleanup Session session = sessionFactory.openSession();
@@ -404,7 +404,7 @@ class HibernateMainTest {
         session.getTransaction().commit();
     }
 
-		@Test
+    @Test
     public void checkAddTrener() {
         @Cleanup SessionFactory sessionFactory = ConnectionUtils.sessionFactory();
         @Cleanup Session session = sessionFactory.openSession();
