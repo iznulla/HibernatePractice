@@ -1,10 +1,9 @@
 package hib.starter.utils;
 
-import hib.starter.Entities.User;
+import hib.starter.Entities.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.sql.Connection;
 
 
 public class ConnectionUtils {
@@ -12,6 +11,10 @@ public class ConnectionUtils {
         Configuration configuration = new Configuration().configure();
         configuration.configure();
         configuration.addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(Company.class);
+        configuration.addAnnotatedClass(ProfileSynthetic.class);
+        configuration.addAnnotatedClass(UserChat.class);
+        configuration.addAnnotatedClass(Chat.class);
         return configuration.buildSessionFactory();
     }
 }
